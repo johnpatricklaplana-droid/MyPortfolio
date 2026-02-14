@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaypee Portfolio</title>
+    <link rel="stylesheet" href="src/styles/PortFolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="src/styles/Projects.css">
+    <link rel="stylesheet" href="src/styles/Skills.css">
+</head>
+
+<body>
+
+    <nav class="navBar">
+        <h1>John Patrick Laplana/Portfolio</h1>
+        <ul class="ulList">
+            <li><span>About</span></li>
+            <li><span>Skills</span></li>
+            <li><span>Project</span></li>
+            <li><span>Contact</span></li>
+        </ul>
+
+        <i class="fa-solid fa-bars"></i>
+    </nav>
+  
+    <!-- sliding window -->
+    <div class="slidesWrapper">
+        <div class="slide aboutMeContainerSlide active">
+            <img class="myPicture" src="src/images/picture.png" alt="">
+            <div class="aboutMeHighlightWrapper">
+                <h1>I’m John Patrick Laplana,</h1>
+                <h3>and I help projects succeed through clean, efficient, and innovative solutions</h3>
+                <button class="btn readMoreBtn"> <span>Read more</span> </button>
+            </div>
+            
+            <video class="video videoBackGroundInAboutMeSlide" src="src/images/techworld.mp4" muted autoplay loop></video>
+        </div>
+        <div class="slide skillsContainerSlide">
+            <img class="myPicture" src="src/images/picture.png" alt="">
+            <div class="aboutMeHighlightWrapper">
+                <h3>Experienced in Java, full-stack development, algorithms, and building scalable solutions.</h3>
+                <button class="btn readMoreBtnInskillsSlide"> <span>Read more</span> </button>
+            </div>
+      
+            <video class="video" src="src/images/techUniverse.mp4" muted autoplay loop></video>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div class="aboutMainContainer">
+        <h1>About me</h1>
+        <p>I’m John Patrick Laplana, a developer who enjoys building functional and visually clean applications. I focus on
+        creating intuitive interfaces and writing logical, well-structured code while continuously improving my skills through
+        real projects.</p>
+
+        <p>The video below shows one of my projects and gives a simple look at how I approach building things. It reflects my
+        current skill level and my effort to turn ideas into working solutions while continuing to learn and improve.</p>
+        
+        <video class="evidence" src="src/images/Screen Recording 2026-02-06 221621.mp4" controls muted autoplay></video>
+
+    </div>
+    
+    <!-- Projects -->
+    <div class="skillsMainContainer">
+ 
+        <h1>Projects</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt commodi mollitia voluptates facere amet ipsa aliquid illum perferendis labore provide</p>
+
+        <div class="sliderContainer">
+            <div class="ProjectsContainer">
+                <img src="src/images/Screenshot 2026-01-15 191840.png" alt="">
+                <img src="src/images/Screenshot 2026-01-15 192541.png" alt="">
+                <img src="src/images/Screenshot 2026-01-16 215945.png" alt="">
+                <img src="src/images/Screenshot 2026-01-16 220808.png" alt="">
+                <img src="src/images/Screenshot 2026-01-16 223215.png" alt="">
+            </div>
+            <i class="btnInSkills prev fa-solid fa-angles-left"></i>
+            <i class="btnInSkills next fa-solid fa-angles-right"></i>
+        </div>
+
+    </div>
+
+    <section class="skillsContainer">
+        <video class="skillsBackgroundVideo" src="src/images/skills.mp4" autoplay muted loop></video>
+        <div class="solar_system">
+            <img class="sun" src="src/images/java.png" alt="">
+            
+            <div class="orbit orbit1">
+                <img class="planet planet1" src="src/images/mysql.png" alt="">
+            </div>
+            
+            <div class="orbit orbit2">
+                <img class="planet planet2" src="src/images/js.png" alt="">
+            </div>
+            
+            <div class="orbit orbit3">
+                <img class="planet planet3" src="src/images/css.png" alt="">
+            </div>
+            
+            <div class="orbit orbit4">
+                <img class="planet planet4" src="src/images/html.png" alt="">
+            </div>
+        
+    </section>
+
+    <footer>
+        <!-- TODO -->
+    </footer>
+   
+
+    <script type="module" src="src/pages/portfolio.js"></script>
+</body>
+
+</html>
