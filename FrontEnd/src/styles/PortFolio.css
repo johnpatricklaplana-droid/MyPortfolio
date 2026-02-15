@@ -65,6 +65,11 @@ body {
     border-bottom: 1px solid gray;
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.788);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navBar.hidden {
+    transform: translateY(-100%);
 }
 
 .navBar h1 {

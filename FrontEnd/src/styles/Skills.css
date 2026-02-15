@@ -3,8 +3,8 @@
     width: 100vw;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     position: relative;
-    padding: 50px;
 }
 
 .skillsBackgroundVideo {
@@ -12,7 +12,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    left: 0;
+    pointer-events: none;
 }
 
 .solar_system {
@@ -31,12 +31,24 @@
     width: 100px;
     box-shadow: 1px 1px 8px gray;
     z-index: 4;
+    cursor: pointer;
+    animation: spinLikeAPro 10s linear infinite;
+}
+
+@keyframes spinLikeAPro {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
 }
 
 .sun:hover {
     height: 110px;
     width: 110px;
     filter: brightness(.9);
+    animation-play-state: paused;
 }
 
 .orbit {
@@ -47,6 +59,14 @@
     transform: translate(-50%, -50%);
     animation: rotate 10s linear infinite; 
     border: 1px solid rgb(0, 183, 255);
+}
+
+.orbit.paused {
+    animation-play-state: paused;
+}
+
+.orbit:hover {
+    animation-play-state: paused;
 }
 
 .orbit1 {
@@ -77,22 +97,6 @@
     z-index: 0;
 }
 
-.orbit1:hover {
-    animation-play-state: paused;
-}
-
-.orbit2:hover {
-    animation-play-state: paused;
-}
-
-.orbit3:hover {
-    animation-play-state: paused;
-}
-
-.orbit4:hover {
-    animation-play-state: paused;
-}
-
 .planet {
     position: absolute;
     top: 0;
@@ -103,30 +107,67 @@
     height: 50px;
     animation: rotate 10s linear infinite;
     box-shadow: 1px 1px 8px gray;
+    cursor: pointer;
 }
 
-.planet1:hover {
+.planet:hover {
     height: 55px;
     width: 55px;
     filter: brightness(.9);
 }
 
-.planet2:hover {
-    height: 55px;
-    width: 55px;
-    filter: brightness(.9);
+.sLittleBitOfSkills {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.671);
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 1;
 }
 
-.planet3:hover {
-    height: 55px;
-    width: 55px;
-    filter: brightness(.9);
+.sLittleBitOfSkills h2 {
+    text-shadow: 0px 4px 8px gray;
+    font-family: sans-serif;
 }
 
-.planet4:hover {
-    height: 55px;
-    width: 55px;
-    filter: brightness(.9);
+.description {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    height: 250px;
+    width: 200px;
+    top: var(--ypos);
+    left: var(--xpos);
+    z-index: 10;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translate(-10%);
+    pointer-events: none;
+}
+
+.description.show {
+    opacity: 1;
+    transform: translate(0);
+    pointer-events: all;
+}
+
+.description p {
+    font-family: sans-serif;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, .3);
+    text-emphasis: after;
+    text-align: center;
+}
+
+.description i {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.description i:hover {
+    color: red;
 }
 
 @keyframes rotate {

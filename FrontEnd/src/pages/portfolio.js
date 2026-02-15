@@ -2,6 +2,7 @@
 const slides = document.querySelectorAll(".slide");
 let current = 0;
 
+//Slider
 function showSlide(index) {
     slides.forEach((slide, i) => {
         slide.classList.remove("active", "prev", "next");
@@ -38,7 +39,7 @@ setInterval(nextSlide, 5000);
 
 }) ();
 
-// nav bar change color
+//NavBar background change on scroll and hide on inactivity
 (() => {
 
     const navBar = document.querySelector(".navBar");
@@ -69,9 +70,21 @@ setInterval(nextSlide, 5000);
         }
     });
 
+    let scrollTimer;
+
+    document.addEventListener("scroll", () => {
+        navBar.classList.remove("hidden");
+
+        clearTimeout(scrollTimer);
+
+        scrollTimer = setTimeout(() => {
+            navBar.classList.add("hidden");
+        }, 2000);
+    });
+
 }) ();
 
-// skills projects slides
+//Projects slider
 (() => {
     
     let next = 1;
@@ -105,4 +118,72 @@ setInterval(nextSlide, 5000);
     
 })();
 
+//Shows description and pauses animation
+function toggleSome(planet, orbit) {
+    const skillsContainer = document.querySelector(".skillsContainer").getBoundingClientRect();
+    const rect = planet.getBoundingClientRect();
+    const description = document.querySelector(".description"); 
+
+    const left = rect.left - skillsContainer.left;
+    const top = rect.top - skillsContainer.top;
+
+    description.style.setProperty("--xpos", left + 70 + "px");
+    description.style.setProperty("--ypos", top + 10 + "px");
+    description.classList.add("show");
+    orbit.classList.add("paused");
+
+}
+
+//Hides description and resumes animation
+function hideSome(orbit, description) {
+    orbit.forEach(element => {
+        description.classList.remove("show");
+        element.classList.remove("paused"); 
+    });  
+}
+
+//Description toggle
+(() => {
+    
+    const orbit = document.querySelectorAll(".orbit");
+    const mySql = document.querySelector(".mysql");
+    const javascript = document.querySelector(".javascript");
+    const html = document.querySelector(".html");
+    const orbit1 = document.querySelector(".orbit1");
+    const orbit2 = document.querySelector(".orbit2");
+    const orbit4 = document.querySelector(".orbit4");
+    const css = document.querySelector(".css");
+    const orbit3 = document.querySelector(".orbit3");
+
+    //MYSQL
+    mySql.addEventListener("click", ()=> {
+
+        toggleSome(mySql, orbit1);
+        
+    });
+
+    const descriptionXbutton = document.querySelector(".descriptionXbutton"); 
+
+    descriptionXbutton.addEventListener("click", () => {
+        const description = document.querySelector(".description");
+
+        hideSome(orbit, description);
+    });
+
+    //JAVASCRIPT
+    javascript.addEventListener("click", () => {
+        toggleSome(javascript, orbit2);
+    });
+
+    //HTML
+    html.addEventListener("click", () => {
+        toggleSome(html, orbit4);
+    });
+
+    //CSS
+    css.addEventListener("click", () => {
+        toggleSome(css, orbit3);
+    });
+
+}) ();
 
