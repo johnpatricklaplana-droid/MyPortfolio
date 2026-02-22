@@ -18,16 +18,97 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.612);
 }
 
-.readMoreBtn {
+.viewMyWorkButton {
     background-color: black;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+}
+
+.contactMeButton {
+    background-color: black;
+    color: white;
+}
+
+.heroSection {
+    background:
+            radial-gradient(circle at 100% 100%, #2d0170 0%, transparent 60%),
+            radial-gradient(circle at 0% 100%, #380983 0%, transparent 60%),
+            radial-gradient(circle at 0% 0%, #210063 0%, transparent 70%),
+            #000000;
+    width: 10vw;
+}
+
+.someTalking {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.someTalking button {
+    width: 150px;
+}
+
+.nameOfMine {
+    color: rgb(54, 198, 255);
+}
+
+.white {
+    color: rgba(255, 255, 255, 0.744);
+}
+
+.aboutMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 30px;
+    background:
+            radial-gradient(circle at 100% 0%, #490aa8 0%, transparent 60%),
+            radial-gradient(circle at 0% 100%, #380983 0%, transparent 60%),
+            radial-gradient(circle at 0% 0%, #080214 0%, transparent 70%),
+            #000000;
+}
+
+.aboutmeTalking hr {
+    width: 50%;
+}
+
+.imageSlider {
+    height: 300px;
+    overflow: hidden;
+}
+
+.imagesInAboutMe {
+    width: 300px;
+    height: 300px;
+}
+
+.aboutmeTalking {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    height: fit-content;
+}
+
+.get_to_know_me {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.get_to_know_me hr {
+    width: 80%;
 }
 
 .btn::before {
-    content: "🟠";
+    content: "⚫";
     position: absolute;
     font-size: 0;
     border-radius: 50%;
@@ -60,12 +141,11 @@ body {
     padding: 10px 20px;
     position: fixed;
     width: 100%;
-    background-color: black;
-    color: black;
+    color: white;
     border-bottom: 1px solid gray;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.788);
     transition: transform 0.3s ease-in-out;
+    backdrop-filter: blur(15px);
 }
 
 .navBar.hidden {
@@ -93,22 +173,24 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.685);
+    background-color: black;
 }
 
 .ulList li span {
     position: relative;
     z-index: 1;
-    color: black;
+    color: rgba(255, 255, 255, 0.884);
 }
 
 .ulList li::before {
-    content: "🟠";
+    content: "⚫";
     font-size: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: font-size 1s;
+    transition: font-size .7s;
 }
 
 .ulList li:hover::before {
@@ -152,7 +234,7 @@ body {
     transform: translateX(100%);
 }
 
-.aboutMeContainerSlide {
+.heroSection {
    
 }
 
@@ -167,26 +249,6 @@ body {
     
 }
 
-.aboutMeHighlightWrapper {
-    width: 300px;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.788);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.aboutMeHighlightWrapper h1 {
-    font-family: cursive;
-    margin-bottom: 10px;
-}
-
-.aboutMeHighlightWrapper h3 {
-    font-family: cursive;
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: 100;
-}
-
 .myPicture {
     width: 90%;
     max-width: 400px;
@@ -194,33 +256,6 @@ body {
     border-radius: 50%;
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.788);
-}
-
-.aboutMainContainer {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 100vh;
-    background-color: rgb(218, 238, 255);
-}
-
-.aboutMainContainer h1 {
-    text-align: start;
-}
-
-.aboutMainContainer p {
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
-}
-
-.aboutMainContainer video {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
 }
 
 @media (max-width: 1200px) {
@@ -246,23 +281,6 @@ body {
     .navBar {
         height: 80px;
     }
-
-    .aboutMeHighlightWrapper {
-        width: 220px;
-    }
-
-    .aboutMeHighlightWrapper h1 {
-        font-size: 20px;
-    }
-
-    .aboutMeHighlightWrapper h3 {
-        font-size: 15px;
-    }
-
-    .myPicture,
-    .aboutMainContainer img {
-        max-width: 300px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -284,38 +302,6 @@ body {
 
     .navBar .fa-bars {
         display: block;
-    }
-
-    .aboutMeContainerSlide,
-    .skillsContainerSlide {
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    .aboutMeHighlightWrapper {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .aboutMeHighlightWrapper h3{
-        text-align: center;
-    }
-
-    .aboutMeHighlightWrapper h1 {
-        font-size: 25px;
-        text-align: center;
-    }
-
-    .aboutMeHighlightWrapper h3 {
-        font-size: 20px;
-    }
-
-    .myPicture,
-    .aboutMainContainer img {
-        max-width: 250px;
     }
      
 }

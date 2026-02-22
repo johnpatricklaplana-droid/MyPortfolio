@@ -43,32 +43,32 @@ setInterval(nextSlide, 5000);
 (() => {
 
     const navBar = document.querySelector(".navBar");
-    const aboutMainContainer = document.querySelector(".aboutMainContainer"); 
-    const h1 = navBar.querySelector("h1");
-    const span = navBar.querySelectorAll("span");
-    const menu = navBar.querySelector("i");
+    // const aboutMainContainer = document.querySelector(".aboutMainContainer"); 
+    // const h1 = navBar.querySelector("h1");
+    // const span = navBar.querySelectorAll("span");
+    // const menu = navBar.querySelector("i");
 
-    document.addEventListener("scroll", () => {
+    // document.addEventListener("scroll", () => {
     
-        const distance = aboutMainContainer.getBoundingClientRect().top;
-        const navHeight = navBar.offsetHeight;
+    //     const distance = aboutMainContainer.getBoundingClientRect().top;
+    //     const navHeight = navBar.offsetHeight;
 
-        if (distance <= navHeight) {
-            navBar.style.backgroundColor = "black";
-            h1.style.color = "white";
-            menu.style.color = "white";
-            span.forEach(li => {
-                li.style.color = "white";
-            });
-        } else {
-            navBar.style.backgroundColor = "rgba(255, 255, 255, 0.788)";
-            h1.style.color = "black";
-            menu.style.color = "black";
-            span.forEach(li => {
-                li.style.color = "black";
-            });
-        }
-    });
+    //     if (distance <= navHeight) {
+    //         navBar.style.backgroundColor = "black";
+    //         h1.style.color = "white";
+    //         menu.style.color = "white";
+    //         span.forEach(li => {
+    //             li.style.color = "white";
+    //         });
+    //     } else {
+    //         navBar.style.backgroundColor = "rgba(255, 255, 255, 0.788)";
+    //         h1.style.color = "black";
+    //         menu.style.color = "black";
+    //         span.forEach(li => {
+    //             li.style.color = "black";
+    //         });
+    //     }
+    // });
 
     let scrollTimer;
 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="src/styles/Projects.css">
     <link rel="stylesheet" href="src/styles/Skills.css">
+    <link rel="stylesheet" href="src/styles/Contact.css">
 </head>
 
 <body>
@@ -27,39 +28,45 @@
   
     <!-- sliding window -->
     <div class="slidesWrapper">
-        <div class="slide aboutMeContainerSlide active">
-            <img class="myPicture" src="src/images/picture.png" alt="">
-            <div class="aboutMeHighlightWrapper">
-                <h1>I’m John Patrick Laplana,</h1>
-                <h3>and I help projects succeed through clean, efficient, and innovative solutions</h3>
-                <button class="btn readMoreBtn"> <span>Read more</span> </button>
+        <div class="slide heroSection active">
+            <div class="someTalking">
+                <h1 class="white">
+                    Hello! I'm 
+                    <h1 class="nameOfMine">John Patrick Laplana</h1>
+                </h1>
+                <h3 class="white">Creative Digital Designer</h3>
+                <p class="white">I craft Beautiful & Functional Websites to Help Your Business Grow</p>
+                <div>
+                    <button class="viewMyWorkButton btn"><span>View My Work</span></button>
+                    <button class="contactMeButton btn"><span>Contact Me</span></button>
+                </div>
             </div>
+
+            <img class="myPicture" src="src/images/picture.png" alt="">
             
-            <video class="video videoBackGroundInAboutMeSlide" src="src/images/techworld.mp4" muted autoplay loop></video>
-        </div>
-        <div class="slide skillsContainerSlide">
-            <img class="myPicture" src="src/images/picture.png" alt="">
-            <div class="aboutMeHighlightWrapper">
-                <h3>Experienced in Java, full-stack development, algorithms, and building scalable solutions.</h3>
-                <button class="btn readMoreBtnInskillsSlide"> <span>Read more</span> </button>
-            </div>
-      
-            <video class="video" src="src/images/techUniverse.mp4" muted autoplay loop></video>
+            <!-- <video class="video videoBackGroundInAboutMeSlide" src="src/images/techworld.mp4" muted autoplay loop></video> -->
         </div>
     </div>
 
     <!-- about -->
     <div class="aboutMainContainer">
-        <h1>About me</h1>
-        <p>I’m John Patrick Laplana, a developer who enjoys building functional and visually clean applications. I focus on
-        creating intuitive interfaces and writing logical, well-structured code while continuously improving my skills through
-        real projects.</p>
-
-        <p>The video below shows one of my projects and gives a simple look at how I approach building things. It reflects my
-        current skill level and my effort to turn ideas into working solutions while continuing to learn and improve.</p>
-        
-        <video class="evidence" src="src/images/Screen Recording 2026-02-06 221621.mp4" controls muted autoplay></video>
-
+        <div class="aboutmeTalking">
+            <h1 class="white">About me</h1>
+            <h5 class="get_to_know_me white">Get to know me
+                <hr>
+            </h5>
+            <h5 class="white">Passionate Designer with a love for modern & effective solutions</h5>
+            <hr>
+            <p class="white">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Ut temporibus quasi, rerum aperiam dolor assumenda fuga nesciunt,
+                harum nisi, nulla odit quas reiciendis sit sunt aliquam omnis
+                excepturi fugit. Quam!
+            </p>
+        </div>
+        <div class="imageSlider">
+            <img class="imagesInAboutMe" src="src/images/pexels-pachon-in-motion-426015731-18337643.jpg" alt="">
+            <img class="imagesInAboutMe" src="src/images/35175f18-4a13-43f0-b3ae-2bdca0661a27.png" alt="">
+        </div>
     </div>
     
     <!-- Projects -->
@@ -84,7 +91,7 @@
     </div>
 
     <section class="skillsContainer">
-        <video class="skillsBackgroundVideo" src="src/images/skills.mp4" autoplay muted loop></video>
+        <!-- <video class="skillsBackgroundVideo" src="src/images/skills.mp4" autoplay muted loop></video> -->
         <div class="solar_system">
             <img class="sun" src="src/images/java.png" alt="">
             
@@ -116,9 +123,47 @@
 
     </section>
 
-    <footer>
-        <!-- TODO -->
-    </footer>
+    <section class="contact">
+        <div class="contactHeaderAndHrElementWrapper">
+            <hr>
+            <div class="ContactAndSomeText">
+                <h1 class="white center">Contact Me</h1>
+                <h5 class="white center">Let's work together</h5>
+            </div>
+            <hr>
+        </div>
+
+        <div class="contactsContainer">
+            <div class="boxInContact emailBox">
+                <i class="white fa-solid fa-envelope"></i>
+                <span class="white emailLabel">Email: </span>
+                <a class="white" href="mailto:johnpatricklaplana@gmail.com">johnpatricklaplana@gmail.com</a>
+            </div>
+            <div class="boxInContact phoneNumber">
+                <i class="white fa-solid fa-phone"></i>
+                <span class="white emailLabel">Phone Number: 09567683714</span>
+            </div>
+            <div class="boxInContact location">
+                <i class="white fa-solid fa-location-dot"></i> 
+                <span class="white emailLabel">Location: Los Angeles Lakers</span>
+            </div>
+        </div>
+
+        <div class="sendMeAMessage">
+            <div class="inputsForNameAndEmail">
+                <input class="yourName" type="text" placeholder="Your name">
+                <input class="yourEmail"  type="text" placeholder="Enter your email">
+            </div>
+            <div class="inputForMessageAndButtonSendMessage">
+                <input class="yourMessage" type="text" placeholder="Enter your message">
+                <button class="sendMessage">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- <footer>
+        TODO
+    </footer> -->
    
 
     <script type="module" src="src/pages/portfolio.js"></script>

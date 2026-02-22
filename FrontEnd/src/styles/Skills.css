@@ -5,6 +5,11 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
+    background:
+            radial-gradient(circle at 27% 50%, #e15028 0%, transparent 10%),
+            radial-gradient(circle at 60% 60%, #1f0135 0%, transparent 60%),
+            radial-gradient(circle at 100% 0%, #3c0167 0%, transparent 70%),
+            #0d0015;
 }
 
 .skillsBackgroundVideo {
@@ -58,7 +63,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     animation: rotate 10s linear infinite; 
-    border: 1px solid rgb(0, 183, 255);
+    border: 1px solid white;
 }
 
 .orbit.paused {
